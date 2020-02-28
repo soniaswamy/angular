@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularAssignment';
+  selectedFilter;
+  filteredVal(event) {
+    this.selectedFilter = event;
+    
+   // console.log(this.selectedFilter);
+  }
 }

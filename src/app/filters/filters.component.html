@@ -1,0 +1,58 @@
+<div class="col-xs-12">
+    <div class="row">        
+        <h4>Filters</h4>
+    </div>
+</div>
+<!--<div class="col-xs-12">
+    <div class="row">
+        <div class="filter" >
+            <h4 class="title">Species</h4>
+            <div class="checkbox" *ngFor="let card of cards">
+                <label><input type="checkbox" value=""> {{card.species}}</label>
+            </div>
+        </div> 
+        <div class="filter" >
+            <h4 class="title">Gender</h4>
+            <div class="checkbox">
+                <label><input type="checkbox" value="male" name="gender" ngModel> Male</label>
+                 <label><input type="checkbox" value="female" name="gender" ngModel> Female</label>
+            </div>
+        </div> 
+        <div class="filter" >
+            <h4 class="title">Origin</h4>
+            <div class="checkbox" *ngFor="let card of cards">
+                <label><input type="checkbox" value=""> {{card.origin.name}}</label>
+            </div>
+        </div>         
+    </div>
+</div>-->
+<div class="col-xs-12">
+    <div class="row">
+        <form >
+            <div class="filter" >
+                <h4 class="title">Species</h4>
+                <div class="checkbox" >
+                    <div><input type="checkbox" name="human"  [(ngModel)]="human" (change)="checkedVal('human',$event.target.checked)" value="Human" > Human </div>
+                    <div><input type="checkbox"  name="Mythology"  [(ngModel)]="Mythology" (change)="checkedVal('Mythology',$event.target.checked)" value="Mythology" > Mythology </div>
+                    <div><input type="checkbox" name="Other Species"  [(ngModel)]="OtherSpecies" (change)="checkedVal('Other Species',$event.target.checked)" value="Other Species" > Other Species </div>
+                </div>
+            </div> 
+           <div class="filter" >
+                <h4 class="title">Gender</h4>
+                <div class="checkbox">
+                    <div><input type="checkbox"  (change)="checkedValGender('male',$event.target.checked)" value="male"  > Male</div>
+                    <div><input type="checkbox"  (change)="checkedValGender('female',$event.target.checked)"value="female"   > Female</div>
+                </div>
+            </div> 
+            <div class="filter" >
+                <h4 class="title">Origin</h4>
+                <div class="checkbox" >
+                    <div><input type="checkbox" (change)="checkedValOrigin('Unknown',$event.target.checked)" value="Unknown" > Unknown </div>
+                    <div><input type="checkbox" (change)="checkedValOrigin('Post-Apocalyptic Earth',$event.target.checked)" value="Post-Apocalyptic Earth" > Post-Apocalyptic Earth </div>
+                    <div><input type="checkbox" (change)="checkedValOrigin('Nuptia 4',$event.target.checked)" value="Nuptia 4" > Nuptia 4 </div>
+                    <div><input type="checkbox" (change)="checkedValOrigin('Other Origins',$event.target.checked)" value="Other Origins" > Other Origins </div>
+                </div>
+            </div>
+        </form>      
+    </div>
+</div>

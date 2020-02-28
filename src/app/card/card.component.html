@@ -1,0 +1,67 @@
+<div class="selectedFilters">
+    <div class="col-xs-12" *ngFor="let val of selectedFilter ; let i = index ">    
+            <button type="button" class="btn close btn-secondary"  (click)="onRemoveClick(i)" >
+                {{val.value}}<span aria-hidden="true">×</span> </button> &nbsp;
+    </div>
+</div>
+
+<div class="searchBox">
+    <div class="col-xs-12">
+        <div class="row">
+                <div class="col-sm-9 col-xs-12">               
+                <div class="search">
+                    <h4>Search By Name:</h4>    
+                    <input type="text" value="" name="search"  #searchVal id="search" placeholder="Enter"/>
+                    <button   (click)="search(searchVal)">Search</button>
+                    </div>  
+                </div> 
+                <div class="col-sm-3 col-xs-12">
+                    <div class="sorting">
+                        <label for="">Sort By Id </label>
+                        <select name="sorting" id="sorting" (change)="sortAttrDesc=$event.target.value">
+                            <option value="false">Ascending</option>
+                            <option value="true" >Descending</option>
+                        </select>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="cardDetails">
+    <div class="col-xs-12">
+        <div class="row ">
+            <div class="col-sm-3  col-6" *ngFor="let card of (cards|sorting:sortAttr:sortAttrDesc) ">
+                <div class="card">
+                    <div class="cardImg">
+                         <div class="image">
+                        <img [src]="card.image" class="rounded img-fluid img-responsive"/>
+                        <div class="characterName">
+                            <p class="name">{{card.name}}</p>
+                            <p class="id"><span>id: {{card.id}} </span> - <span>{{card.created | elapsed}}</span></p>
+                        </div>
+                    </div>  
+                         
+                   <div class="characterDetails">
+                       <!--{{cards|json}}-->               
+                       <div class="detail">
+                           <span class="detailHeading" >Status</span><span class="detailedValue">{{card.status}}</span>
+                       </div>
+                       <div class="detail">
+                           <span class="detailHeading">Species</span><span class="detailedValue">{{card.species}}</span>
+                       </div>
+                       <div class="detail">
+                           <span class="detailHeading">Gender</span><span class="detailedValue">{{card.gender}}</span>
+                       </div>
+                       <div class="detail">
+                           <span class="detailHeading">Origin</span><span class="detailedValue">{{card.origin.name}}</span>
+                       </div>
+                       <div class="detail">
+                           <span class="detailHeading">Last Location</span><span class="detailedValue">{{card.location.name}}</span>
+                       </div>
+                   </div>
+                </div>        
+            </div>
+        </div>
+        </div>
+    </div>
+
