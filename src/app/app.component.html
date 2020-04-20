@@ -1,11 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 col-xs-12"><app-filters (changedFilter)="filteredVal($event)"></app-filters></div>
+    <!--div class="col-md-3 col-xs-12"><app-filters (changedFilter)="filteredVal($event)"></app-filters></div>
     <div class="col-md-9 col-xs-12">
       <div class="col-4">
         &nbsp;
       </div>
         <app-card [selectedFilter]="selectedFilter"></app-card>      
-    </div>    
+    </div> -->
+    <div class="col-md-9 col-xs-12">
+      <app-tabs></app-tabs>
+    </div>
   </div>
 </div>

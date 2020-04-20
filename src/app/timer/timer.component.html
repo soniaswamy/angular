@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-7">
+        <h4>Count Down Timer</h4>
+        <p>{{timerCount}}</p>
+    </div>
+    <div class="col-4">
+        <h4>Enter Time Limit</h4>
+        <input type="number" [value]='timerCount'  id="" name="" (input)="timerCount=$event.target.value"/>
+        <div class="btnContainer">
+            <button type="button" class="btn btn-primary">Start/Pause</button>
+            <button type="button" class="btn btn-primary">Stop</button>
+        </div>        
+    </div>
+</div>

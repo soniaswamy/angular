@@ -9,6 +9,11 @@ import { CardComponent } from './card/card.component';
 import { FiltersComponent } from './filters/filters.component';
 import { SortingPipe } from './pipes/sorting.pipe';
 import { ElapsedPipe } from './pipes/elapsed.pipe';
+import { TabsComponent } from './tabs/tabs.component';
+import { BannerComponent } from './banner/banner.component';
+import { TimerComponent } from './timer/timer.component';
+import { ProductComponent } from './product/product.component';
+import { PricePipe } from './pipes/price.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { ElapsedPipe } from './pipes/elapsed.pipe';
     CardComponent,
     FiltersComponent,
     SortingPipe,
-    ElapsedPipe
+    ElapsedPipe,
+    TabsComponent,
+    BannerComponent,
+    TimerComponent,
+    ProductComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,

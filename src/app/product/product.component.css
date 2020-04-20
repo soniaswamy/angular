@@ -1,0 +1,51 @@
+.cardImg {
+    position: relative;
+}
+.cardDetails {
+    background-color: #1f232a;
+    padding: 10px;
+}
+.card {
+    background-color: #333333;
+    margin-bottom: 10px;
+    clear: both;
+}
+.detailHeading {
+    color: #6b6b6b;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 30%;   
+}
+.detailedValue {
+    color: #694c23;
+    font-size: 0.5em;
+    text-align: right;
+    width: 70%; 
+}
+.detail {
+    border-bottom: 1px solid #3a3a3a;
+    padding: 5px;
+    display: flex;
+    width: 100%;
+}
+.detail:last-child {
+    border-bottom: 0;
+}
+.characterDetails {
+    min-height: 145px;
+}
+.characterName { 
+    background-color: #272c2f;
+    margin-top: -50px;
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+    height: 50px;
+    padding: 3px;
+    font-size: 14px;
+}
+.characterName p {margin-bottom: 0;}
+.characterName .name { font-size: 14px; color: #ffffff;}
+.characterName p.id { color: #afafb1;}
+.views { clear: both; margin: 10px 0 20px 0;}
